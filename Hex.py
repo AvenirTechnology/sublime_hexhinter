@@ -2,7 +2,6 @@ import sublime, sublime_plugin
 
 class HexCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        hex = False
         sels = self.view.sel()
         for sel in sels:
             if self.view.substr(sel).find('0x') != -1:
